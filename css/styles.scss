@@ -15,3 +15,81 @@
   src: url('../fonts/overpass-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+:root{
+  --orange-500: hsl(25, 97%, 53%);
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(217, 12%, 63%);
+  --grey-900: hsl(213, 19%, 18%);
+  --grey-950: hsl(216, 12%, 8%);
+  --body-font-paragraph: calc(15 / 16 * 1rem);
+  --padding: calc(20 / 16 * 1rem);
+}
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--grey-950);
+}
+
+.parent-container{
+  height: 100%;
+  width: clamp(calc(300 / 16 * 1rem), 90vw, calc(330 / 16 * 1rem));
+}
+
+.rating-component{
+  position: relative;
+  background-color: var(--grey-900);
+  height: calc(360 / 16 * 1rem);
+  border-radius: calc(20 / 16 * 1rem);
+}
+
+.thank-you-state-component{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: var(--grey-900);
+  height: 100%;
+  border-radius: calc(20 / 16 * 1rem);
+  opacity: 0;
+}
