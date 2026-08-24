@@ -21,8 +21,10 @@
   --grey-500: hsl(217, 12%, 63%);
   --grey-900: hsl(213, 19%, 18%);
   --grey-950: hsl(216, 12%, 8%);
-  --body-font-paragraph: calc(15 / 16 * 1rem);
-  --padding: calc(20 / 16 * 1rem);
+  --grey-buttons-and-star-container: hsl(216, 14%, 22%);
+  --body-font-paragraph: calc(14 / 16 * 1rem);
+  --padding-block: calc(25 / 16 * 1rem);
+  --padding-inline: calc(25 / 16 * 1rem);
 }
 
 /* || RESET */
@@ -70,6 +72,7 @@ body{
   min-height: 100vh;
   width: 100%;
   background-color: var(--grey-950);
+  font-family: "Overpass", sans-serif;
 }
 
 .parent-container{
@@ -82,6 +85,36 @@ body{
   background-color: var(--grey-900);
   height: calc(360 / 16 * 1rem);
   border-radius: calc(20 / 16 * 1rem);
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+}
+
+.image-container{
+  height: calc(40 / 16 * 1rem);
+  width: calc(40 / 16 * 1rem);
+  border-radius: 50%;
+  background-color: var(--grey-buttons-and-star-container);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-1{
+  padding-block-start: calc(20 / 16 * 1rem);
+  font-size: calc(25 / 16 * 1rem);
+  color:var(--white)
+}
+
+.paragraph-1{
+  font-size: var(--body-font-paragraph);
+  padding-block-start: calc(15 / 16 * 1rem);
+  line-height: 1.45em;
+  color: var(--grey-500)
+}
+
+.star{
+  height: calc(13 / 16 * 1rem);
+  width: calc(13 / 16 * 1rem);
 }
 
 .thank-you-state-component{

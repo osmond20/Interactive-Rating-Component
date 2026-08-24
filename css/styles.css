@@ -20,8 +20,10 @@
   --grey-500: hsl(217, 12%, 63%);
   --grey-900: hsl(213, 19%, 18%);
   --grey-950: hsl(216, 12%, 8%);
-  --body-font-paragraph: calc(15 / 16 * 1rem);
-  --padding: calc(20 / 16 * 1rem);
+  --grey-buttons-and-star-container: hsl(216, 14%, 22%);
+  --body-font-paragraph: calc(14 / 16 * 1rem);
+  --padding-block: calc(25 / 16 * 1rem);
+  --padding-inline: calc(25 / 16 * 1rem);
 }
 
 /* || RESET */
@@ -69,6 +71,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-color: var(--grey-950);
+  font-family: "Overpass", sans-serif;
 }
 
 .parent-container {
@@ -81,6 +84,36 @@ body {
   background-color: var(--grey-900);
   height: 22.5rem;
   border-radius: 1.25rem;
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+}
+
+.image-container {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--grey-buttons-and-star-container);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-1 {
+  padding-block-start: 1.25rem;
+  font-size: 1.5625rem;
+  color: var(--white);
+}
+
+.paragraph-1 {
+  font-size: var(--body-font-paragraph);
+  padding-block-start: 0.9375rem;
+  line-height: 1.45em;
+  color: var(--grey-500);
+}
+
+.star {
+  height: 0.8125rem;
+  width: 0.8125rem;
 }
 
 .thank-you-state-component {
