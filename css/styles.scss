@@ -120,9 +120,54 @@ body{
 .thank-you-state-component{
   position: absolute;
   top: 0;
+  left:0;
   width: 100%;
   background-color: var(--grey-900);
   height: 100%;
   border-radius: calc(20 / 16 * 1rem);
   opacity: 0;
+  pointer-events: none;
+}
+
+.rating-selector-holder{
+  display: flex;
+  padding-block-start: clamp(calc(20 / 16 * 1rem), calc(-1.7857rem + 14.2857vw), calc(25 / 16 * 1rem));
+  padding-inline-start: calc(3 / 16 * 1rem);
+  gap: calc(20 / 16 * 1rem);
+}
+
+.rate{
+  height: clamp(calc(36 / 16 * 1rem), calc(-0.18rem + 11.43vw), calc(40 / 16 * 1rem));
+  width: clamp(calc(36 / 16 * 1rem), calc(-0.18rem + 11.43vw), calc(40 / 16 * 1rem));
+  background-color: var(--grey-buttons-and-star-container);
+  border-radius: calc(50 / 16 * 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(calc(13 / 16 * 1rem), calc(0.205rem + 2.86vw), calc(14 / 16 * 1rem));
+  color: var(--grey-500);
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+.rate:hover{
+  background-color: var(--orange-500);
+  color:var(--grey-950);
+  cursor: pointer;
+}
+
+.rating-submit-button{
+  margin-block-start: calc(25 / 16 * 1rem);
+  font-size: clamp(0.8rem, calc(-0.657rem + 6.857vw), 0.95rem);
+  font-weight: 700;
+  width: 100%;
+  background-color: var(--orange-500);
+  height: clamp(calc(36 / 16 * 1rem), calc(-3.214rem + 25.714vw), calc(45 / 16 * 1rem));
+  border-radius: calc(27 / 16 * 1rem);
+  transition: background-color 0.3s ease;
+}
+
+.rating-submit-button:hover{
+   background-color: white; 
+   cursor: pointer;
 }

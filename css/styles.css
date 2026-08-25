@@ -119,9 +119,54 @@ body {
 .thank-you-state-component {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: var(--grey-900);
   height: 100%;
   border-radius: 1.25rem;
   opacity: 0;
+  pointer-events: none;
+}
+
+.rating-selector-holder {
+  display: flex;
+  padding-block-start: clamp(1.25rem, -1.7857rem + 14.2857vw, 1.5625rem);
+  padding-inline-start: 0.1875rem;
+  gap: 1.25rem;
+}
+
+.rate {
+  height: clamp(2.25rem, -0.18rem + 11.43vw, 2.5rem);
+  width: clamp(2.25rem, -0.18rem + 11.43vw, 2.5rem);
+  background-color: var(--grey-buttons-and-star-container);
+  border-radius: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.8125rem, 0.205rem + 2.86vw, 0.875rem);
+  color: var(--grey-500);
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+.rate:hover {
+  background-color: var(--orange-500);
+  color: var(--grey-950);
+  cursor: pointer;
+}
+
+.rating-submit-button {
+  margin-block-start: 1.5625rem;
+  font-size: clamp(0.8rem, -0.657rem + 6.857vw, 0.95rem);
+  font-weight: 700;
+  width: 100%;
+  background-color: var(--orange-500);
+  height: clamp(2.25rem, -3.214rem + 25.714vw, 2.8125rem);
+  border-radius: 1.6875rem;
+  transition: background-color 0.3s ease;
+}
+
+.rating-submit-button:hover {
+  background-color: white;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
