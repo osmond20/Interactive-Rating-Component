@@ -117,16 +117,59 @@ body{
   width: calc(13 / 16 * 1rem);
 }
 
-.thank-you-state-component{
+.thank-you-state-component {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   background-color: var(--grey-900);
   height: 100%;
-  border-radius: calc(20 / 16 * 1rem);
-  opacity: 0;
+  border-radius: 1.25rem;
+  opacity: 1;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--padding-inline);
+  gap: calc(18 / 16 * 1rem);
+  align-items: center;
+  padding-block: var(--padding-block);
+  animation: fadeIn 0.9s ease-in 1;
+}
+
+.thank-you-image{
+  height: calc(100 / 16 * 1rem);
+  width: calc(147 / 16 * 1rem);
+}
+
+.selected-rate-container{
+  background-color: var(--grey-buttons-and-star-container);
+  height: calc(30/ 16 * 1rem);
+  width: calc(165 / 16 * 1rem);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: calc(12 / 16 * 1rem);
+}
+
+.rate-paragraph{
+  font-size: calc(14 / 16 * 1rem);
+  color:var(--orange-500);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.title-2{
+  font-size: calc(23.5 / 16 * 1rem);
+  color: var(--white);
+  padding-block-start: calc(12 / 16 * 1rem);
+}
+
+.paragraph-2{
+   font-size: calc(13.5 / 16 * 1rem);
+  line-height: 1.45em;
+  color: var(--grey-500);
+  text-align: center;
 }
 
 .rating-selector-holder{
@@ -170,4 +213,26 @@ body{
 .rating-submit-button:hover{
    background-color: white; 
    cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0%{
+    scale:0.45;
+    opacity: 0.25;
+  }
+  
+  50%{
+    scale:0.5;
+    opacity:0.50;
+  }
+
+  70%{
+    scale: 0.90;
+    opacity: 0.75;
+  }
+
+  100%{
+    scale:1;
+    opacity:1;
+  }
 }
