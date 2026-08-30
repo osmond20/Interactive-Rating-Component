@@ -80,13 +80,24 @@ body{
   width: clamp(calc(300 / 16 * 1rem), 90vw, calc(330 / 16 * 1rem));
 }
 
-.rating-component{
+.rating-component-container{
   position: relative;
-  background-color: var(--grey-900);
   height: calc(360 / 16 * 1rem);
   border-radius: calc(20 / 16 * 1rem);
+}
+
+.input-container{
+  height: 100%;
+  width: 100%;
+  background-color: var(--grey-900);
+  border-radius: 1.25rem;
   padding-block: var(--padding-block);
   padding-inline: var(--padding-inline);
+}
+
+.input-container.not-show{
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 .image-container{
@@ -117,7 +128,7 @@ body{
   width: calc(13 / 16 * 1rem);
 }
 
-.thank-you-state-component {
+.thank-you-state-component{
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +136,7 @@ body{
   background-color: var(--grey-900);
   height: 100%;
   border-radius: 1.25rem;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   display: flex;
   flex-direction: column;
@@ -133,7 +144,11 @@ body{
   gap: calc(18 / 16 * 1rem);
   align-items: center;
   padding-block: var(--padding-block);
-  animation: fadeIn 0.9s ease-in 1;
+}
+
+.thank-you-state-component.show{
+   animation: fadeIn 0.9s ease-in 1;
+   opacity: 1;
 }
 
 .thank-you-image{
@@ -194,9 +209,14 @@ body{
 }
 
 .rate:hover{
-  background-color: var(--orange-500);
+  background-color: var(--white);
   color:var(--grey-950);
   cursor: pointer;
+}
+
+.rate.select{
+  background-color:var(--orange-500);
+  color:var(--grey-950);
 }
 
 .rating-submit-button{
