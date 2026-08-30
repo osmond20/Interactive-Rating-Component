@@ -16,4 +16,4 @@ submitBtn.addEventListener("click", () =>{
     inputContainer.classList.add("not-show");
     rateHolder.textContent = rate;
     thankYouContainer.classList.add("show");
-})
+});

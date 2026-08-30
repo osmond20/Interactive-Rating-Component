@@ -77,12 +77,12 @@ body{
 
 .parent-container{
   height: 100%;
-  width: clamp(calc(300 / 16 * 1rem), 90vw, calc(330 / 16 * 1rem));
+  width: clamp(calc(300 / 16 * 1rem), 80vw, calc(410 / 16 * 1rem));
 }
 
 .rating-component-container{
   position: relative;
-  height: calc(360 / 16 * 1rem);
+  height: clamp(calc(370 / 16 * 1rem), 80vw, calc(410 / 16 * 1rem));
   border-radius: calc(20 / 16 * 1rem);
 }
 
@@ -91,8 +91,8 @@ body{
   width: 100%;
   background-color: var(--grey-900);
   border-radius: 1.25rem;
-  padding-block: var(--padding-block);
-  padding-inline: var(--padding-inline);
+  padding-block: clamp(var(--padding-block), 6vw, calc(30 / 16 * 1rem));
+  padding-inline: clamp(var(--padding-inline), 6vw, calc(30 / 16 * 1rem));
 }
 
 .input-container.not-show{
@@ -101,8 +101,8 @@ body{
 }
 
 .image-container{
-  height: calc(40 / 16 * 1rem);
-  width: calc(40 / 16 * 1rem);
+  height: clamp(calc(40 / 16 * 1rem), 9.6vw, calc(50 / 16 * 1rem));
+  width: clamp(calc(40 / 16 * 1rem), 9.6vw, calc(50 / 16 * 1rem));
   border-radius: 50%;
   background-color: var(--grey-buttons-and-star-container);
   display: flex;
@@ -111,23 +111,73 @@ body{
 }
 
 .title-1{
-  padding-block-start: calc(20 / 16 * 1rem);
-  font-size: calc(25 / 16 * 1rem);
+  padding-block-start: clamp(calc(20 / 16 * 1rem), 9.6vw, calc(33 / 16 * 1rem));
+  font-size: clamp(calc(25 / 16 * 1rem), 2vw, calc(28 / 16 * 1rem));
   color:var(--white)
 }
 
 .paragraph-1{
-  font-size: var(--body-font-paragraph);
+  font-size: clamp(var(--body-font-paragraph), 2vw, calc(15.5 / 16 * 1rem));
   padding-block-start: calc(15 / 16 * 1rem);
   line-height: 1.45em;
   color: var(--grey-500)
 }
 
 .star{
-  height: calc(13 / 16 * 1rem);
-  width: calc(13 / 16 * 1rem);
+  height: clamp(calc(13 / 16 * 1rem), 2vw, calc(16 / 16 * 1rem));
+  width: clamp(calc(13 / 16 * 1rem), 2vw, calc(16 / 16 * 1rem));
 }
 
+.rating-selector-holder{
+  display: flex;
+  justify-content: center;
+  padding-block-start: clamp(calc(20 / 16 * 1rem), 2vw, calc(25 / 16 * 1rem));
+  padding-inline-start: calc(3 / 16 * 1rem);
+  gap: clamp(calc(17 / 16 * 1rem), 4.75vw, calc(22 / 16 * 1rem));
+}
+
+.rate{
+  height: clamp(calc(36 / 16 * 1rem), 9.6vw, calc(50 / 16 * 1rem));
+  width: clamp(calc(36 / 16 * 1rem), 9.6vw, calc(50 / 16 * 1rem));
+  background-color: var(--grey-buttons-and-star-container);
+  border-radius: calc(50 / 16 * 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(calc(13 / 16 * 1rem), calc(0.205rem + 2.86vw), calc(17 / 16 * 1rem));
+  color: var(--grey-500);
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+.rate:hover{
+  background-color: var(--white);
+  color:var(--grey-950);
+  cursor: pointer;
+}
+
+.rate.select{
+  background-color:var(--orange-500);
+  color:var(--grey-950);
+}
+
+.rating-submit-button{
+  margin-block-start: clamp(calc(25 / 16 * 1rem), 2vw, calc(30 / 16 * 1rem));
+  font-size: clamp(0.8rem, 3.5vw, 1rem);
+  font-weight: 700;
+  width: 100%;
+  background-color: var(--orange-500);
+  height: clamp(calc(36 / 16 * 1rem), 9vw, calc(45 / 16 * 1rem));
+  border-radius: calc(27 / 16 * 1rem);
+  transition: background-color 0.3s ease;
+}
+
+.rating-submit-button:hover{
+   background-color: white; 
+   cursor: pointer;
+}
+
+/* -- THANK YOU STATE COMPONENT -- */
 .thank-you-state-component{
   position: absolute;
   top: 0;
@@ -140,10 +190,10 @@ body{
   pointer-events: none;
   display: flex;
   flex-direction: column;
-  padding-inline: var(--padding-inline);
+  padding-inline: clamp(var(--padding-block), 2vw, calc(30 / 16 * 1rem));
   gap: calc(18 / 16 * 1rem);
   align-items: center;
-  padding-block: var(--padding-block);
+  padding-block: clamp(var(--padding-block), 6vw, calc(30 / 16 * 1rem));
 }
 
 .thank-you-state-component.show{
@@ -152,8 +202,8 @@ body{
 }
 
 .thank-you-image{
-  height: calc(100 / 16 * 1rem);
-  width: calc(147 / 16 * 1rem);
+  height: clamp(calc(100 / 16 * 1rem), 2vw, calc(140 / 16 * 1rem));
+  width: clamp(calc(147 / 16 * 1rem), 2vw, calc(160 / 16 * 1rem))
 }
 
 .selected-rate-container{
@@ -175,64 +225,16 @@ body{
 }
 
 .title-2{
-  font-size: calc(23.5 / 16 * 1rem);
+  font-size: clamp(calc(23.5 / 16 * 1rem), 2vw, calc(28 / 16 * 1rem));
   color: var(--white);
   padding-block-start: calc(12 / 16 * 1rem);
 }
 
 .paragraph-2{
-   font-size: calc(13.5 / 16 * 1rem);
+   font-size: clamp(calc(13.5 / 16 * 1rem), 2vw, calc(15.5 / 16 * 1rem));
   line-height: 1.45em;
   color: var(--grey-500);
   text-align: center;
-}
-
-.rating-selector-holder{
-  display: flex;
-  padding-block-start: clamp(calc(20 / 16 * 1rem), calc(-1.7857rem + 14.2857vw), calc(25 / 16 * 1rem));
-  padding-inline-start: calc(3 / 16 * 1rem);
-  gap: calc(20 / 16 * 1rem);
-}
-
-.rate{
-  height: clamp(calc(36 / 16 * 1rem), calc(-0.18rem + 11.43vw), calc(40 / 16 * 1rem));
-  width: clamp(calc(36 / 16 * 1rem), calc(-0.18rem + 11.43vw), calc(40 / 16 * 1rem));
-  background-color: var(--grey-buttons-and-star-container);
-  border-radius: calc(50 / 16 * 1rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: clamp(calc(13 / 16 * 1rem), calc(0.205rem + 2.86vw), calc(14 / 16 * 1rem));
-  color: var(--grey-500);
-  transition: background-color 0.3s ease;
-  font-weight: 700;
-}
-
-.rate:hover{
-  background-color: var(--white);
-  color:var(--grey-950);
-  cursor: pointer;
-}
-
-.rate.select{
-  background-color:var(--orange-500);
-  color:var(--grey-950);
-}
-
-.rating-submit-button{
-  margin-block-start: calc(25 / 16 * 1rem);
-  font-size: clamp(0.8rem, calc(-0.657rem + 6.857vw), 0.95rem);
-  font-weight: 700;
-  width: 100%;
-  background-color: var(--orange-500);
-  height: clamp(calc(36 / 16 * 1rem), calc(-3.214rem + 25.714vw), calc(45 / 16 * 1rem));
-  border-radius: calc(27 / 16 * 1rem);
-  transition: background-color 0.3s ease;
-}
-
-.rating-submit-button:hover{
-   background-color: white; 
-   cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -254,5 +256,22 @@ body{
   100%{
     scale:1;
     opacity:1;
+  }
+}
+
+@media (min-width:48rem){
+  .thank-you-state-component{
+    padding-block-start: calc(40 / 16 * 1rem);
+  }
+
+  .thank-you-image{
+    height: 110px;
+    width: 170px;
+  }
+
+  .selected-rate-container{
+     height: calc(35/ 16 * 1rem);
+    width: calc(185 / 16 * 1rem);
+    border-radius: 20px;
   }
 }
