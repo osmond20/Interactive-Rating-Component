@@ -12,10 +12,9 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 
 ## Overview
@@ -36,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-DmYZO4H-Li)
-- Live Site URL: [Deployed solution](https://osmond20.github.io/Interactive-Rating-Component/)
+- Live Site URL: [Interactive Rating Component Site](https://osmond20.github.io/Interactive-Rating-Component/)
 
 ## My process
 
@@ -76,10 +75,9 @@ To see how you can add code snippets, see below:
 
 ### Continued development
 
-I will be priortizing getting better with my JS, while maintaing responsive design knowledge that I have built up thus far.
+I will be prioritizing getting better with my JS, while maintaing responsive design knowledge that I have built up thus far.
 
 ### AI Collaboration
-
 
 - What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)? Github Copilot
 - How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)? I used for assesing any issues I encountered when I was trying to apply the clamp function.
