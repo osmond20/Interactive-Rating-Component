@@ -20,7 +20,12 @@
   --grey-500: hsl(217, 12%, 63%);
   --grey-900: hsl(213, 19%, 18%);
   --grey-950: hsl(216, 12%, 8%);
-  --grey-buttons-and-star-container: hsl(216, 14%, 22%);
+  --grey-gradient: linear-gradient(
+    250deg,
+    hsl(213, 19%, 18%) 0,
+    hsl(214, 16%, 13%) 0%
+  );
+  --grey-buttons-and-star-container: hsl(212, 13%, 20%);
   --body-font-paragraph: calc(14 / 16 * 1rem);
   --padding-block: calc(25 / 16 * 1rem);
   --padding-inline: calc(25 / 16 * 1rem);
@@ -74,12 +79,13 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
+/* --MAIN-- */
 .parent-container {
   height: 100%;
   width: clamp(18.75rem, 80vw, 25.625rem);
 }
 
-.rating-component-container {
+.rating-component {
   position: relative;
   height: clamp(23.125rem, 80vw, 25.625rem);
   border-radius: 1.25rem;
@@ -88,7 +94,7 @@ body {
 .input-container {
   height: 100%;
   width: 100%;
-  background-color: var(--grey-900);
+  background: var(--grey-gradient);
   border-radius: 1.25rem;
   padding-block: clamp(var(--padding-block), 6vw, 1.875rem);
   padding-inline: clamp(var(--padding-inline), 6vw, 1.875rem);
@@ -182,7 +188,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--grey-900);
+  background: var(--grey-gradient);
   height: 100%;
   border-radius: 1.25rem;
   opacity: 0;
@@ -254,13 +260,19 @@ body {
     opacity: 1;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .input-container.not-show {
+    transition: opacity 0.6s ease;
+    opacity: 0;
+  }
+}
 @media (min-width: 48rem) {
   .thank-you-state-component {
     padding-block-start: 2.5rem;
   }
   .thank-you-image {
-    height: 110px;
-    width: 170px;
+    height: 6.875rem;
+    width: 10.625rem;
   }
   .selected-rate-container {
     height: 2.1875rem;

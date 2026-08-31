@@ -3,7 +3,7 @@ const submitBtn = document.querySelector(".rating-submit-button");
 const inputContainer = document.querySelector(".input-container");
 const thankYouContainer = document.querySelector(".thank-you-state-component");
 let rate = 0;
-let rateHolder = document.querySelector(".selected-rate");
+const rateHolder = document.querySelector(".selected-rate");
 
 selectedRate.forEach(button =>{
     button.addEventListener("click", () =>{
